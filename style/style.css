@@ -1,0 +1,679 @@
+@font-face {
+    src: url(../fonts/OptimusPrincepsSemiBold.ttf);
+    font-family: 'Dark Souls';
+}
+
+@font-face {
+    src: url(../fonts/darkeuphorigenic.ttf);
+    font-family: 'Cyrillic Dark Souls';
+}
+
+@font-face {
+    src: url(../fonts/WakeSnake-6YLzq.ttf);
+    font-family: 'Snake Font';
+}
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    font-family: 'Dark Souls';
+    background-image: url(../assets/MainBg.jpg);
+    background-size: cover;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.main-title {
+    text-transform: uppercase;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+    color: rgb(230, 230, 230);
+    font-size: 30px;
+    margin-right: 10%;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo-container {
+    width: 150px;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.drop-menu {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: white;
+    transition: .4s;
+}
+
+.drop-menu::after {
+    content: "▼";
+    padding-left: 8px;
+}
+
+.drop-menu:hover::after {
+    content: "▲";
+}
+
+#loc::after, #loc:hover::after {
+    content: none;
+}
+
+.drop-menu:hover .dropmenu-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.drop-menu > a {
+    color: white;
+    text-decoration: none;
+}
+
+.drop-menu > a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.dropmenu-content {
+    position: absolute;
+    background-image: url(../assets/MainBg.jpg);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+.dropmenu-content div > a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px;
+}
+
+.dropmenu-content > div:hover {
+    background-color: gray;
+}
+
+main {
+    background-image: url(../assets/IrithyllBg.jpg);
+    padding-top: 80px;
+    padding-bottom: 30px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.welcome-title {
+    font-family: 'Cyrillic Dark Souls';
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.ds {
+    font-family: 'Dark Souls';
+    text-transform: uppercase;
+}
+
+.pick-a-game {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: 'Dark Souls';
+    font-size: 26px;
+}
+
+.pick-a-game div:not(:last-child) {
+    margin-right: 50px;
+}
+
+.pick-a-game div {
+    border-bottom: 0.5px orange solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.pick-a-game div:hover {
+    background: transparent;
+    -webkit-text-stroke: 0.5px orange;
+}
+
+.index-content-table {
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+    border-spacing: 20px;
+    height: 464px;
+}
+
+.table-container {
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 10px;
+    width: 60%;
+    border: 1px solid;
+    border-image: url(../assets/tableBorder.png) repeat 3;
+}
+
+.index-content-table td {
+    vertical-align: top;
+}
+
+#index-table3 {
+    background-image: url(../assets/ds3TableBg.jpg);
+}
+
+.active-switch {
+    background: transparent;
+    -webkit-text-stroke: 0.5px orange;
+}
+
+.inactive-switch {
+    background: linear-gradient(to top, rgba(15,15,15,1) 20%,rgba(15,15,15,1) 20%,rgba(122,164,206,0) 100%);
+    -webkit-text-stroke: 0.2px orange;
+}
+
+.table-title {
+    border-bottom: 1px white solid;
+    font-size: 28px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.index-content-table ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.index-content-table ul li {
+    margin-bottom: 10px;
+}
+
+.index-table-link {
+    color: yellow;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+.index-table-link:hover {
+    text-decoration: underline;
+}
+
+.needs-margin {
+    margin-top: 50px;
+}
+
+footer {
+    background-image: url(../assets/MainBg.jpg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.from-logo {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.snake {
+    font-family: 'Snake Font';
+    font-size: 24px;
+}
+
+.main-page-content {
+    background-color: rgba(30, 30, 30, 0.7);
+    width: 70%;
+    margin: 0 auto;
+    color: rgb(202, 195, 195);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.main-page-info {
+    float: right;
+    margin-left: 20px;
+    border: 1px black solid;
+    padding: 5px;
+    background: transparent;
+}
+
+.flag {
+    width: 25px;
+    margin-right: 5px;
+}
+
+.main-page-info table {
+    font-size: 14px;
+}
+
+.main-page-info table th {
+    border-bottom: 1px yellow solid;
+    color: rgb(177, 173, 146);
+    height: 30px;
+    font-size: 24px;
+}
+
+.main-page-info table tr td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.main-page-info table tr td:first-child {
+    border-top: 1px yellow solid;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.main-page-content h1, .main-page-content h2 {
+    text-decoration: underline;
+    margin-bottom: 15px;
+    height: 40px;
+    width: 95%;
+}
+
+.main-page-content h3 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.main-page-content h2 {
+    margin-top: 20px;
+}
+
+.main-page-content p {
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.main-page-content a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.main-page-content ul {
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.main-page-content a:hover {
+    text-decoration: underline;
+}
+
+.req {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.req tr:first-child {
+    background: linear-gradient(to top, black, rgb(30, 30, 30));
+    height: 38px;
+}
+
+.req td {
+    vertical-align: middle;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.description {
+    font-style: italic;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.from-where {
+    font-style: normal;
+    text-align: right;
+}
+
+.gallery1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 40px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.gallery1 img {
+    width: 300px;
+}
+
+.table-switch-items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.table-switch-items-category {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.table-switch-items-category:hover {
+    color: yellow;
+}
+
+.selected-cat {
+    color: yellow;
+}
+
+.unselected-cat {
+    color: rgb(202, 195, 195);
+}
+
+#weapons-cat td {
+    width: 25%;
+    vertical-align: top;
+}
+
+#weapons-cat tr:not(:last-child) td, #armor-cat tr:not(:last-child) td, #items-cat tr:not(:last-child) td, #armor-cat-5-elem tr:not(:last-child) td, #spells-cat tr:not(:last-child) td, #rings-cat tr:not(:last-child) td, #keys-cat tr:not(:last-child) td {
+    border-bottom: 1px gray solid;
+}
+
+.table-switch {
+    box-shadow: black 0px 0px 10px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 955.44px;
+    line-height: 25px;
+}
+
+.table-switch img {
+    width: 120px;
+}
+
+.table-switch td {
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#armor-cat tr td:first-child, #armor-cat-5-elem tr td:first-child {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+#armor-cat td, #items-cat td {
+    width: 20%;
+}
+
+#armor-cat-5-elem tr td:not(:first-child) {
+    width: 20%;
+}
+
+#armor-cat-5-elem img {
+    width: 100px;
+}
+
+#armor-cat, #souls-cat, #spells-cat, #keys-cat, #rings-cat, #items-cat, #armor-cat-5-elem {
+    display: none;
+}
+
+.gallery-of-bosses {
+    text-align: center;
+}
+
+.gallery-of-bosses > div {
+    padding: 15px;
+    box-sizing: content-box;
+    display: inline-block;
+    margin: 1px;
+    vertical-align: top;
+}
+
+.bosses-image-container {
+    width: 185px;
+    height: 139px;
+}
+
+.bosses-image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bosses-link {
+    width: 185px;
+    margin-top: 10px;
+}
+
+.bosses-link sup {
+    font-size: 12px;
+}
+
+.dlc-link:hover sup {
+    text-decoration: underline;
+}
+
+.dlc-link:hover {
+    text-decoration: none !important;
+}
+
+.boss-page-info {
+    float: right;
+    margin-left: 20px;
+    border: 1px rgb(105, 98, 87) solid;
+    background: transparent;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.boss-page-info th {
+    border-bottom: 1px rgb(105, 98, 87) solid;
+    color: rgb(177, 173, 146);
+    height: 30px;
+    font-size: 24px;
+}
+
+.boss-page-info td {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-top: 1px rgb(105, 98, 87) solid;
+}
+
+.characteristic-title {
+    background: linear-gradient(to top,rgba(95,0,0,0) 0%,rgba(15,15,15,1) 20%,rgba(15,15,15,1) 20%,rgba(122,164,206,0) 100%);
+    font-weight: bold;
+}
+
+.needs-scrolling {
+    overflow-y: auto;
+    max-height: 85px;
+    line-height: 1.5;
+}
+
+body::-webkit-scrollbar, .needs-scrolling::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track, .needs-scrolling::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb, .needs-scrolling::-webkit-scrollbar-thumb {
+    background-color: rgb(177, 173, 146);
+    border-radius: 15px;
+    border: 3px black solid;
+}
+
+.resistance {
+    text-align: center;
+    width: 40%;
+    border-collapse: collapse;
+    background-color: rgba(30, 30, 30, 0.3);
+}
+
+.resistance tr td:nth-child(2) {
+    width: 50%;
+}
+
+.resistance td, .resistance th {
+    padding: 6px 12px;
+    border-bottom: 1px gray solid;
+    height: 30px;
+}
+
+.resistance th {
+    background-color: black;
+}
+
+.dialogue-table {
+    width: 55%;
+    border-collapse: collapse;
+    border: 1px black solid;
+    line-height: 1.75;
+}
+
+.dialogue-table td, .dialogue-table th {
+    padding: 6px 12px;
+    border-bottom: 1px gray solid;
+}
+
+.dialogue-table th {
+    background-color: black;
+}
+
+h4 {
+    margin-bottom: 20px;
+}
+
+.ingame-desc {
+    width: 50%;
+    margin-left: 30px;
+    padding-left: 20px;
+    font-size: 14px;
+    border: 1px rgb(105, 98, 87) solid;
+    line-height: 2;
+}
+
+.game-info {
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+}
+
+.form-container {
+    width: 100%;
+    text-align: center;
+}
+
+.form-container input[type="text"], .form-container input[type="password"] {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px gray solid;
+    height: 50px;
+    color: gray;
+    margin-bottom: 30px;
+    outline: none;
+    font-size: 30px;
+}
+
+.form-container input[type="submit"] {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 36px;
+    font-family: 'Cyrillic Dark Souls';
+    transition: 0.3s;
+    color: rgb(100, 100, 100);
+}
+
+.form-container input[type="submit"]:hover {
+    text-shadow: 0 0 10px rgb(170, 170, 170);
+    color: rgb(170, 170, 170);
+}
+
+.user {
+    background-color: rgb(20, 20, 20);
+    font-family: 'Cyrillic Dark Souls';
+    color: rgb(230, 230, 230);
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-out {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.log-out:hover {
+    color: yellow;
+    text-shadow: 0 0 10px yellow;
+}
+
+.vertical-line {
+    height: 25px;
+    margin: 0 30px;
+}
+
+.auth-link {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.auth-link:hover {
+    color: yellow;
+    text-shadow: 0 0 10px yellow;
+}
+
+.change-for-the-better {
+    color: gray;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.success {
+    color: green;
+}
+
+.success a {
+    color: green;
+    transition: 0.3s;
+}
+
+.success a:hover {
+    text-shadow: 0 0 10px green;
+}
+
+.main-page-content ol {
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.dialogue-variant {
+    font-style: normal;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+}

@@ -1,0 +1,141 @@
+let weapons_btn = document.querySelector("#weapons-btn");
+let armor_btn = document.querySelector("#armor-btn");
+let rings_btn = document.querySelector("#rings-btn");
+let souls_btn = document.querySelector("#souls-btn");
+let spells_btn = document.querySelector("#spells-btn");
+let keys_btn = document.querySelector("#keys-btn");
+let items_btn = document.querySelector("#items-btn");
+
+let table_weapons = document.querySelector("#weapons-cat");
+let table_armor = document.querySelector("#armor-cat");
+let table_rings = document.querySelector("#rings-cat");
+let table_souls = document.querySelector("#souls-cat");
+let table_spells = document.querySelector("#spells-cat");
+let table_keys = document.querySelector("#keys-cat");
+let table_items = document.querySelector("#items-cat");
+
+weapons_btn.addEventListener("click", function() {
+    table_weapons.style.display = "table";
+    table_armor.style.display = "none";
+    table_souls.style.display = "none";
+    table_spells.style.display = "none";
+    table_keys.style.display = "none";
+    table_rings.style.display = "none";
+    weapons_btn.classList.remove("unselected-cat");
+    weapons_btn.classList.add("selected-cat");
+    armor_btn.classList.remove("selected-cat");
+    armor_btn.classList.add("unselected-cat");
+    souls_btn.classList.remove("selected-cat");
+    souls_btn.classList.add("unselected-cat");
+    spells_btn.classList.remove("selected-cat");
+    spells_btn.classList.add("unselected-cat");
+    keys_btn.classList.remove("selected-cat");
+    keys_btn.classList.add("unselected-cat");
+    rings_btn.classList.remove("selected-cat");
+    rings_btn.classList.add("unselected-cat");
+});
+
+armor_btn.addEventListener("click", function() {
+    table_armor.style.display = "table";
+    table_weapons.style.display = "none";
+    table_souls.style.display = "none";
+    table_spells.style.display = "none";
+    table_keys.style.display = "none";
+    table_rings.style.display = "none";
+    armor_btn.classList.remove("unselected-cat");
+    armor_btn.classList.add("selected-cat");
+    weapons_btn.classList.remove("selected-cat");
+    weapons_btn.classList.add("unselected-cat");
+    souls_btn.classList.remove("selected-cat");
+    souls_btn.classList.add("unselected-cat");
+    spells_btn.classList.remove("selected-cat");
+    spells_btn.classList.add("unselected-cat");
+    keys_btn.classList.remove("selected-cat");
+    keys_btn.classList.add("unselected-cat");
+    rings_btn.classList.remove("selected-cat");
+    rings_btn.classList.add("unselected-cat");
+});
+
+rings_btn.addEventListener("click", function() {
+    table_rings.style.display = "table";
+    table_weapons.style.display = "none";
+    table_souls.style.display = "none";
+    table_spells.style.display = "none";
+    table_keys.style.display = "none";
+    table_armor.style.display = "none";
+    rings_btn.classList.remove("unselected-cat");
+    rings_btn.classList.add("selected-cat");
+    weapons_btn.classList.remove("selected-cat");
+    weapons_btn.classList.add("unselected-cat");
+    souls_btn.classList.remove("selected-cat");
+    souls_btn.classList.add("unselected-cat");
+    spells_btn.classList.remove("selected-cat");
+    spells_btn.classList.add("unselected-cat");
+    keys_btn.classList.remove("selected-cat");
+    keys_btn.classList.add("unselected-cat");
+    armor_btn.classList.remove("selected-cat");
+    armor_btn.classList.add("unselected-cat");
+});
+
+souls_btn.addEventListener("click", function() {
+    table_souls.style.display = "table";
+    table_weapons.style.display = "none";
+    table_armor.style.display = "none";
+    table_spells.style.display = "none";
+    table_keys.style.display = "none";
+    table_rings.style.display = "none";
+    souls_btn.classList.remove("unselected-cat");
+    souls_btn.classList.add("selected-cat");
+    weapons_btn.classList.remove("selected-cat");
+    weapons_btn.classList.add("unselected-cat");
+    armor_btn.classList.remove("selected-cat");
+    armor_btn.classList.add("unselected-cat");
+    spells_btn.classList.remove("selected-cat");
+    spells_btn.classList.add("unselected-cat");
+    keys_btn.classList.remove("selected-cat");
+    keys_btn.classList.add("unselected-cat");
+    rings_btn.classList.remove("selected-cat");
+    rings_btn.classList.add("unselected-cat");
+});
+
+spells_btn.addEventListener("click", function() {
+    table_spells.style.display = "table";
+    table_weapons.style.display = "none";
+    table_souls.style.display = "none";
+    table_armor.style.display = "none";
+    table_keys.style.display = "none";
+    table_rings.style.display = "none";
+    spells_btn.classList.remove("unselected-cat");
+    spells_btn.classList.add("selected-cat");
+    weapons_btn.classList.remove("selected-cat");
+    weapons_btn.classList.add("unselected-cat");
+    souls_btn.classList.remove("selected-cat");
+    souls_btn.classList.add("unselected-cat");
+    armor_btn.classList.remove("selected-cat");
+    armor_btn.classList.add("unselected-cat");
+    keys_btn.classList.remove("selected-cat");
+    keys_btn.classList.add("unselected-cat");
+    rings_btn.classList.remove("selected-cat");
+    rings_btn.classList.add("unselected-cat");
+});
+
+keys_btn.addEventListener("click", function() {
+    table_keys.style.display = "table";
+    table_weapons.style.display = "none";
+    table_souls.style.display = "none";
+    table_spells.style.display = "none";
+    table_armor.style.display = "none";
+    table_rings.style.display = "none";
+    keys_btn.classList.remove("unselected-cat");
+    keys_btn.classList.add("selected-cat");
+    weapons_btn.classList.remove("selected-cat");
+    weapons_btn.classList.add("unselected-cat");
+    souls_btn.classList.remove("selected-cat");
+    souls_btn.classList.add("unselected-cat");
+    spells_btn.classList.remove("selected-cat");
+    spells_btn.classList.add("unselected-cat");
+    armor_btn.classList.remove("selected-cat");
+    armor_btn.classList.add("unselected-cat");
+    rings_btn.classList.remove("selected-cat");
+    rings_btn.classList.add("unselected-cat");
+});
